@@ -32,7 +32,7 @@ public class FirebaseDB {
         return FirebaseDB.firebaseDB;
     }
 
-    public Integer getLatestIDFromLookupDocument(Firestore firestore, String collectionName) throws WebServiceException {
+    public String getLatestIDFromLookupDocument(Firestore firestore, String collectionName) throws WebServiceException {
         CommonLogger.info(FirebaseDB.class, "Connecting to Firebase Firestore for retrieving Lookup document...");
         ApiFuture<DocumentSnapshot> future = firestore.collection(collectionName).document(this.LOOKUP_DOCUMENT_NAME).get();
         DocumentSnapshot document;

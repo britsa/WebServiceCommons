@@ -10,13 +10,13 @@ import java.util.Map;
 
 public class IDLookupDocument {
 
-    private Integer idValue;
+    private String idValue;
 
     public IDLookupDocument(Map<String, Object> databaseValue) {
-        this.idValue = ((Long) databaseValue.getOrDefault(CommonConstants.LOOKUP_DOC_LATEST_ID, null)).intValue();
+        this.idValue = String.valueOf(databaseValue.getOrDefault(CommonConstants.LOOKUP_DOC_LATEST_ID, null));
     }
 
-    public Integer getIdValue() {
+    public String getIdValue() {
         return idValue;
     }
 }
