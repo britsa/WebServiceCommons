@@ -3,12 +3,14 @@ package com.britsa.commons.dto;
 import com.britsa.commons.loggers.CommonLogger;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.cloud.firestore.annotation.IgnoreExtraProperties;
 
 /**
  * @author Maria Irudaya Regilan J
  */
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@IgnoreExtraProperties
 public class StatusIndicator {
 
     private Boolean success;
